@@ -1,0 +1,66 @@
+#hiring {
+
+   position: relative;
+   width: 100vw;
+   .hiring__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10rem;
+      background-color: $color-gray-0;
+      margin-top: $mg-5 * 3;
+      .row {
+         width: 98%;
+         align-items: center;
+         justify-content: center;
+         button {
+            float: right;
+         }
+      }
+
+      .hiring__title {
+         h4 {
+            letter-spacing: $letter-space-0 - 1;
+            text-transform: uppercase;
+            font-weight: $fw-0;
+            margin-bottom: $mg-2;
+            span {
+               color: $color-yellow-0;
+            }
+         }
+      }
+
+      .hiring__button {
+         text-transform: uppercase;
+         transition: $transition;
+         @include styleButton($color-white-0, $color-black-3, transparent, $fs-0, $fw-0, $pd-1, $pd-1*2);
+         &:hover {
+            background-color: $color-yellow-0;
+         }
+      }
+
+   }
+
+   @include responsive("medium") {
+      .hiring__content {
+         height: 300px;
+         .row {
+            div:nth-child(1) {
+               text-align: center;
+               padding-bottom: $pd-1;
+            }
+
+            div:nth-child(2) {
+               display: flex;
+               justify-content: center;
+            }
+         }
+      }
+   }
+
+   @include responsive('extra-small') {
+      .hiring__content {
+         width: 414px;
+      }
+   }
+}

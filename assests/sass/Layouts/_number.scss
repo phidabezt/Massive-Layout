@@ -1,0 +1,45 @@
+#number {
+   height: 40rem;
+   background-color: $color-black-7;
+   display: flex;
+   align-items: center;
+   .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .counter-container {
+         text-align: center;
+         color: $color-white-0;
+         padding: $pd-3 * 4;
+         width: fit-content;
+
+         .counter {
+            margin-bottom: $mg-1;
+            font-size: $fs-4;
+            line-height: $line-height-0;
+            
+            
+            i {
+               margin-right: $mg-3;
+            }
+         }
+
+         span {
+            letter-spacing: $letter-space-0;
+            white-space: nowrap;
+         }
+      }
+   }
+
+   @include responsive("medium") {
+      .container {
+         .counter-container {
+            text-align: left;
+         }
+      }
+   }
+
+   @include responsive('extra-small') {
+      height: 60rem;
+   }
+}

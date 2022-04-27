@@ -1,0 +1,36 @@
+#parallax {
+   height: 30rem;
+   background-image: url('../img/paralax/8.jpg');
+   @extend %backgroundImg;
+   position: relative;
+   margin-top: $mg-6;
+   .parallax__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1 {
+         color: $color-yellow-0;
+         font-size: $fs-0 + 1;
+         font-weight: $fw-1 + 100;
+         letter-spacing: $letter-space-1 - 2;
+      }
+
+      h3 {
+         letter-spacing: $letter-space-0;
+         font-size: $fs-4;
+      }
+
+      button {
+         text-transform: uppercase;
+         transition: $transition;
+         margin-top: $mg-5;
+         letter-spacing: $letter-space-0;
+         @include styleButton($color-white-0, $color-yellow-0, transparent, $fs-0, $fw-0, $pd-1, $pd-1*2);
+         &:hover {
+            background-color: $color-white-0;
+            color: $color-black-3;
+         }
+      }
+   }
+}

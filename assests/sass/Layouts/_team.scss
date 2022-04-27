@@ -1,0 +1,91 @@
+#team {
+   .col-4 {
+      padding: 0 $pd-1 * 2;
+   }
+   .team__member {
+      position: relative;
+      margin-top: $mg-5;
+      .team__img {
+         position: relative;
+         .team__info {
+            position: absolute;
+            bottom: 8%;
+            right: 0;
+            background-color: $color-black-5;
+            color: $color-white-0;
+            width: 70%;
+            text-align: right;
+            padding: $pd-0 $pd-3;
+            text-transform: uppercase;
+            letter-spacing: $letter-space-0;
+
+            h5 {
+               font-size: $fs-1;
+            }
+            span {
+               color: $color-gray-9;
+               font-size: $fs-1 - 2;
+            }
+         }
+      }
+
+      overflow: hidden;
+
+      .team__overlay {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         margin: 0;
+         transition: $transition-2;
+         border: $border-3;
+         background-color: $color-white-1;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         padding: $pd-6 0 $pd-3 0;
+         text-align: center;
+         opacity: 0;
+
+         .team__status {
+            width: 80%;
+            margin: 0 auto;
+            transform: translateY(-80%);
+            h4 {
+               text-transform: uppercase;
+               margin-bottom: $mg-1;
+               font-size: $fs-1;
+               letter-spacing: $letter-space-1;
+            }
+
+            p {
+               line-height: $line-height-1;
+               color: $color-gray-3;
+            }
+
+         }
+
+         .team__social  {
+            transform: translateY(300%);
+            a {
+
+               margin: 0 $mg-2;
+            }
+         }
+      }
+
+      &:hover .team__overlay {
+         opacity: 1;
+         .team__status {
+            transform: translateY(0);
+            transition: $transition-2;
+         }
+
+         .team__social {
+            transform: translateY(0);
+            transition: $transition-2;
+         }
+      }
+   }
+}

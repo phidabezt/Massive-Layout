@@ -1,0 +1,29 @@
+.to-top {
+   background-color: $color-black-2;
+   position: fixed;
+   bottom: 1rem;
+   right: 2rem;
+   width: 3rem;
+   height: 3rem;
+   line-height: 3rem;
+   text-align: center;
+   color: $color-white-0;
+   font-size: $fs-0;
+   transition: $transition-1;
+   pointer-events: none;
+   opacity: 0;
+   &:hover {
+      background-color: $color-yellow-0;
+      color: $color-black-3;
+   }
+
+   &.active {
+      bottom: 2rem;
+      pointer-events: auto;
+      opacity: 1;
+   }
+
+   @include responsive('extra-small') {
+      display: none;
+   }
+}

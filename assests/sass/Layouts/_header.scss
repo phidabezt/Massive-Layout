@@ -1,0 +1,104 @@
+#header {
+   #navbar {
+      overflow: hidden;
+      background-color: transparent;
+      padding: $pd-3 $pd-0;
+      transition: $transition-1;
+      position: fixed;
+      top: 0;
+      z-index: 100; 
+      width: 100vw;
+
+      .navbar-brand {
+         height: 96px;
+         width: auto;
+         transition: $transition-1;
+         img {
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            max-height: 100%;
+            padding: 2px 0;
+            transition: $transition;
+         }
+      }
+
+      button {
+         &:focus {
+            outline: none;
+         }
+      }
+
+      .navbar-toggler-icon {
+         color: $color-white-0;
+         font-size: $fs-5;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: none;
+      }
+
+      #navbarNav {
+         justify-content: flex-end;
+         width: 100%;
+         .nav-item {
+            margin-right: $mg-2;
+            .nav-link {
+               text-transform: uppercase;
+               font-size: $fs-1 - 1;
+               color: $color-white-0;
+               transition: $transition-1;   
+            }
+            &:hover .nav-link {
+               color: $color-yellow-0;
+            }
+
+            &.active {
+               .nav-link {
+                  color: $color-yellow-0;
+               }
+            }
+         }
+      }
+   }
+
+   @include responsive("medium") {
+      #navbar {
+         position: fixed !important;
+         top: 0;
+         left: 0;
+         z-index: 1000;
+         #navbarNav {
+            padding: 0;
+            background-color: $color-white-0;
+            .nav-item {
+               margin: 0;
+               border-bottom: $border-2;
+               .nav-link {
+                  color: $color-black-3;
+                  display: flex;
+                  justify-content: space-between;
+                  padding: $pd-1 $pd-3;
+               }
+            }
+   
+            .nav-item-special {
+               display: none;
+            }
+   
+            .nav-item.active {
+               a {
+                  color: $color-yellow-0;
+               }
+            }
+         }
+      }
+   }
+
+   @include responsive('extra-small') {
+      #navbar {
+         width: 414px;
+      }
+   }
+}
+

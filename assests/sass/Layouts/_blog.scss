@@ -1,0 +1,126 @@
+#blog {
+   width: 80%;
+   .blog__content {
+      margin-top: $mg-6;
+   }
+      
+   .blog__img {
+      position: relative;
+      .blog__img-overlay {
+         position: absolute;
+         width: 100%;
+         bottom: 0;
+         left: 0;
+         background-color: $color-black-6;
+         p {
+            margin: 0;
+            line-height: $line-height-3;
+            color: $color-white-0;
+            padding: $pd-0;
+            font-size: $fs-0;
+         }
+      }
+   }
+
+   a {
+      transition: $transition;
+      letter-spacing: $letter-space-0;
+   }
+
+   .blog__desk {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0 $pd-3 * 1.5;
+
+      ul {
+         margin: 0;
+      }
+
+      ul li {
+         list-style: none;
+         display: inline;
+
+         a {
+            text-transform: uppercase;
+            color: $color-gray-10;
+            margin-right: $mg-3;
+            &::after {
+               content: ',';
+            }
+
+            transition: $transition;
+            &:hover {
+               color: $color-yellow-0;
+            }
+         }
+      }
+
+      h4 {
+         letter-spacing: $letter-space-0 - 1;
+         font-size: $fs-3;
+         margin: 0;
+         padding: $pd-1 0;
+
+         &:hover a {
+            color: $color-yellow-0;
+         }
+      }
+
+      .blog__date {
+         a {
+            text-transform: uppercase;
+            color: $color-gray-10;
+            margin-right: $mg-3;
+         }
+         span {
+            color: $color-gray-10;
+         }
+
+         &:hover a {
+            color: $color-yellow-0;
+         }
+
+         .date {
+            margin-left: $mg-3;
+            text-transform: uppercase;
+            letter-spacing: $letter-space-0;
+            transition: $transition;
+         }
+      }
+   }
+
+   .blog__text {
+      margin-top: $mg-4;
+      line-height: $line-height-1;
+      color: $color-gray-3;
+      font-size: $fs-0;
+   }
+   
+   .blog__read-more {
+      letter-spacing: $letter-space-0 - 1;
+      text-transform: uppercase;
+      line-height: $line-height-0;
+      color: $color-gray-8;
+      margin-top: $mg-1;
+      i {
+         margin-left: $mg-3;
+      }
+
+      &:hover {
+         color: $color-black-4;
+      }
+   }
+
+   @include responsive("medium") {
+      .blog__content {
+         .row {
+            .blog__desk {
+               margin-top: $mg-2;
+               padding: 0;
+            }
+         }
+      }
+   }
+}
